@@ -38,7 +38,7 @@ app.get('/api/ping', (request, response) => {
 app.get('/roll-dice', (request, response) => {
 	console.log('Calling "/roll-dice" on the Node.js server.')
 	response.type('text/plain')
-	response.send(Math.floor(Math.random() * 6) + 1)
+	response.send((Math.floor(Math.random() * 6) + 1).toString())
 })
 
 // Add x and y which are both passed in on the URL. 
