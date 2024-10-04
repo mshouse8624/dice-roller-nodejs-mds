@@ -35,10 +35,10 @@ app.get('/api/ping', (request, response) => {
 })
 
 // Return the value of 2 plus 2.
-app.get('/2plus2', (request, response) => {
-	console.log('Calling "/2plus2" on the Node.js server.')
+app.get('/roll-dice', (request, response) => {
+	console.log('Calling "/roll-dice" on the Node.js server.')
 	response.type('text/plain')
-	response.send('4')
+	response.send(Math.floor(Math.random() * 6) + 1)
 })
 
 // Add x and y which are both passed in on the URL. 
