@@ -12,8 +12,8 @@
 <div id="fetch-about-result"></div>
 <br><br>
 
-<button type="button" onclick="fetch2Plus2()">Fetch 2plus2</button>
-<div id="fetch-2plus2-result"></div>
+<button type="button" onclick="fetchRollDice()">Fetch Roll Dice</button>
+<div id="fetch-roll-dice"></div>
 <br><br>
 
 Add two integers on the Node.js server.<br />
@@ -48,12 +48,12 @@ Add two integers on the Node.js server.<br />
 		document.getElementById("fetch-about-result").innerHTML = responseText + " ("+fetchAboutCounter+")"
 	}
 
-	let fetch2plus2Counter = 0
-	async function fetch2Plus2() {
-		fetch2plus2Counter++
-		const response = await fetch("/2plus2")
+	let fetchRollDiceCounter = 0
+	async function fetchRollDice() {
+		fetchRollDiceCounter++
+		const response = await fetch("/roll-dice")
 		const responseText = await response.text()
-		document.getElementById("fetch-2plus2-result").innerHTML = responseText + " ("+fetch2plus2Counter+")"
+		document.getElementById("fetch-roll-dice").innerHTML = responseText + " ("+fetchRollDiceCounter+")"
 	}
 
 	async function addTwoIntegers() {
