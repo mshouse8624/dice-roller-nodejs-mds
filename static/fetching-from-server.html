@@ -49,11 +49,11 @@ Add two integers on the Node.js server.<br />
 	}
 
 	let fetchRollDiceCounter = 0
-	async function fetchRollDice() {
+	async function fetchd6() {
 		fetchRollDiceCounter++
-		const response = await fetch("/roll-dice")
+		const response = await fetch("/d6")
 		const responseText = await response.text()
-		document.getElementById("fetch-roll-dice").innerHTML = responseText + " ("+fetchRollDiceCounter+")"
+		document.getElementById("fetch-d6").innerHTML = responseText + " ("+fetchRollDiceCounter+")"
 	}
 
 	async function addTwoIntegers() {

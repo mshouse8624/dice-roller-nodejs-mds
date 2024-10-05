@@ -45,7 +45,6 @@ app.get('/2plus2', (request, response) => {
 app.get('/d6', (request, response) => {
 	console.log('Calling "/d6" on the Node.js server.')
 	response.type('text/plain')
-	response.send((Math.floor(Math.random() * 6) + 1).toString())
 	let result = Math.floor(Math.random() * 6) + 1
 	response.json({result})
 	// response.send((Math.floor(Math.random() * 6) + 1).toString())
