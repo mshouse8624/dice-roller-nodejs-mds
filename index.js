@@ -34,11 +34,21 @@ app.get('/api/ping', (request, response) => {
 	response.send('ping response')
 })
 
-// Return the value of 2 plus 2.
-app.get('/roll-dice', (request, response) => {
-	console.log('Calling "/roll-dice" on the Node.js server.')
+// Retturn the value of 2 plus 2
+app.get('/2plus2', (request, response) => {
+	console.log('calling "/2plus2" on the Node.js server.')
+	response.type('text/plain')
+	response.send('4')
+})
+
+// Returns a random number between 1 and 6.
+app.get('/d6', (request, response) => {
+	console.log('Calling "/d6" on the Node.js server.')
 	response.type('text/plain')
 	response.send((Math.floor(Math.random() * 6) + 1).toString())
+	let result = Math.floor(Math.random() * 6) + 1
+	response.json({result})
+	// response.send((Math.floor(Math.random() * 6) + 1).toString())
 })
 
 // Add x and y which are both passed in on the URL. 
