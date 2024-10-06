@@ -46,8 +46,7 @@ app.get('/d6', (request, response) => {
 	console.log('Calling "/d6" on the Node.js server.')
 	response.type('application/json')
 	let result = Math.floor(Math.random() * 6) + 1
-	response.json({result: result})
-	// response.send((Math.floor(Math.random() * 6) + 1).toString())
+	response.json({diceRoll: result})
 })
 
 // Add x and y which are both passed in on the URL. 
